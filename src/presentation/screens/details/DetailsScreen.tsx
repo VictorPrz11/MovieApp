@@ -13,19 +13,19 @@ interface Props extends StackScreenProps<RootParams,'Details'>{
 const DetailsScreen = ({route}:Props) => {
   // const params = useRoute<RouteProp<RootParams,"Details" >>().params //se toman los parametros que se dan por defecto a dicha pantalla en este caso Details 
 const {movieId} = route.params
-const {isLoading,movie} = useMoviesH(movieId)
+const {isLoading,movie,cast = []} = useMoviesH(movieId)
 if(isLoading){
   return 
 }
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator = {false}>
 
       {/* Header */}
       <Movieheader title={movie!.title} subtitle={movie!.originalTitle} poster={movie!.poster}/>
       
        {/* Detalles */}
 
-     <MovieDetails movie={movie!} />
+     <MovieDetails movie={movie!} cast = {cast} />
     </ScrollView>
   )
 }

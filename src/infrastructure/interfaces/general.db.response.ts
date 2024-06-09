@@ -110,8 +110,7 @@ export interface SpokenLanguage {
 }
 export interface Cast {
     id:   number;
-    cast: CastElement[];
-    crew: CastElement[];
+    cast: CastElement[]
 }
 
 export interface CastElement {

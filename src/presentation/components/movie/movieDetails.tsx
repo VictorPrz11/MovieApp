@@ -2,10 +2,14 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import { FullMovie } from '../../../core/entities/movie.entity'
 import { Formatter } from '../../../config/helpers/formatter'
+import { movieActors } from '../../../core/entities/cast.entity'
+import { FlatList, ScrollView } from 'react-native-gesture-handler'
+import { ActorDetails } from './actor';
 interface Props{
-    movie: FullMovie
+    movie: FullMovie,
+    cast: movieActors[]    
 }
-export const MovieDetails = ({movie}:Props) => {
+export const MovieDetails = ({movie,cast}:Props) => {
     return (
         <>
             <View style={{marginHorizontal: 20 }}>
@@ -20,8 +24,9 @@ export const MovieDetails = ({movie}:Props) => {
 
             </View>
 
-            <View style = {{marginTop:10, marginBottom: 100}}>
+            <View style = {{marginTop:10, marginBottom: 50}}>
                 <Text style = {{fontSize:23, marginTop: 10, fontWeight: 'bold', marginHorizontal: 20}}>Actores</Text>
+                <FlatList data = {cast} keyExtractor={(item)=> item.id.toString()} horizontal showsHorizontalScrollIndicator= {false} renderItem={({item})=><ActorDetails actor={item} />}/>    
             </View>
         </>
     )

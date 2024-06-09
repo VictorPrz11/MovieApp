@@ -10,10 +10,12 @@ const HomeScreen = () => {
   const {top} =useSafeAreaInsets()
   const {isLoading,popular,nowPlaying,topRated,upcoming,popularNextPage} = useMovies()
   if(isLoading){
-    return (<Text>Cargando...</Text>)
+    return (<View style = {{flex:1 , justifyContent: 'center', alignItems:'center'}}>
+      <Text>Cargando...</Text>
+    </View>)
   }
   return (
-   <ScrollView>
+   <ScrollView >
     <View style = {{marginTop:top + 20,paddingBottom:30}}>
       {/* principal */}
 
