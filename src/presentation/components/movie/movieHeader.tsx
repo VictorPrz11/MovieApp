@@ -71,14 +71,16 @@ const styles = StyleSheet.create({
   marginContainer: {
     marginHorizontal: 20,
     marginTop: 20,
-  },
+
+     },
   subTitle: {
     fontSize: 16,
     opacity: 0.8,
   },
   title: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
+    fontStyle: 'italic'
   },
   backButton: {
     position: 'absolute',

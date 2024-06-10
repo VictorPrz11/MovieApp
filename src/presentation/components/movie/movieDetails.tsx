@@ -18,7 +18,7 @@ export const MovieDetails = ({movie,cast}:Props) => {
                 <Text style = {{marginLeft: 0.5}}> - {movie.genres.join(', ')}</Text>
                 </View>
                 <Text style = {{fontSize:23, marginTop: 10, fontWeight: 'bold'}}>Historia</Text>
-                <Text style = {{fontSize:16}}>{movie.description}</Text>
+                <Text style = {{fontSize:16}} >{movie.description}</Text>
                 <Text style = {{fontSize:23, marginTop: 10, fontWeight: 'bold'}}>Presupuesto</Text>
                 <Text style = {{fontSize:18}}>{Formatter.currency(movie.budget)}</Text>
 

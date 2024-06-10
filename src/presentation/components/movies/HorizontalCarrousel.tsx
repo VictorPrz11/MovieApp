@@ -42,8 +42,9 @@ export const HorizontalCarrousel = ({ movie, title, loadNextPage }: Props) => {
                     <Text
                         style={{
                             fontSize: 30,
-                            fontWeight: 300,
+                            fontWeight: 'bold',
                             marginLeft: 10,
+                            fontStyle: 'italic',
                             marginBottom: 10
                         }}>{title}</Text>
                 )
